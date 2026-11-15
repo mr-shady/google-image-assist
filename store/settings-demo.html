@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head><base href="../"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Image Assist — Settings</title><link rel="stylesheet" href="options.css"></head>
+<body><main>
+  <header><img src="icon48.png" width="48" height="48" alt=""><div><h1>Image Assist <span id="version" aria-label="Extension version"></span></h1><p>FOR GOOGLE IMAGES</p></div></header>
+  <h2>A better image workflow.</h2><p class="intro">Your originals. Your preferences.</p>
+  <label for="size">Default search size</label>
+  <select id="size"><option value="none">Any size · keep Google unchanged</option><option value="large">Large</option><option value="medium">Medium</option><option value="icon">Icon</option></select>
+  <p class="help">Applies to future image searches. Existing size filters are preserved.</p>
+  <label for="position">Information card position</label>
+  <select id="position"><option value="right">Top right</option><option value="left">Top left</option></select>
+  <p class="help">On smaller screens, the card moves to the bottom.</p>
+  <p id="saved" role="status" aria-live="polite">Changes save automatically.</p>
+  <footer><a class="project-link" href="https://mr-shady.github.io/google-image-assist/" target="_blank" rel="noopener noreferrer">Project website &amp; downloads ↗</a>Designed &amp; developed by <a href="https://reza-nemati.ir" target="_blank" rel="noopener noreferrer">Reza Nemati</a><span>Interface icons by <a href="https://www.svgrepo.com" target="_blank" rel="noopener noreferrer">Solar Icons / SVG Repo</a></span></footer>
+</main><script>window.chrome={runtime:{getManifest:()=>({version:"2.2.1"})},storage:{local:{get:async()=>({defaultSize:'large',position:'right'}),set:async()=>{}}}};</script><script src="options.js"></script></body></html>

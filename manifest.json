@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Image Assist for Google Images",
+  "version": "2.2.1",
+  "description": "Find the original image, check its dimensions, format and file size, and download it directly from Google Images.",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "downloads",
+    "contextMenus",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Image Assist settings",
+    "default_popup": "options.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/search*"
+      ],
+      "js": [
+        "shared.js",
+        "ui-icons.js",
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
